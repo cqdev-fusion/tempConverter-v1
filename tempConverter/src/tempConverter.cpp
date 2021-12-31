@@ -8,6 +8,7 @@
 
 // TODO: Place functions in other files
 // Work out how to do this.
+// Streamline code
 
 
 #include <iostream>
