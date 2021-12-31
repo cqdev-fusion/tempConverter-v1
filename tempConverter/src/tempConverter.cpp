@@ -10,11 +10,29 @@
 
 void welcomeBanner();
 void menuSelector();
+void celciusToFahrenheit(double celcius);
+void celciusToKelvine(double celcius);
+void celciusToRankine(double celcius);
+void fahrenheitToCelcius(double fahrenheit);
+void fahrenheitToKelvine(double fahrenheit);
+void fahrenheitToRankine(double fahrenheit);
+void kelvineToCelcius(double kelvine);
+void kelvineToFahrenheit(double kelvine);
+void kelvineToRankine(double kelvine);
+void rankineToCelcius(double rankine);
+void rankineToFahrenheit(double rankine);
+void rankineToKelvine(double rankine);
+
+double celcius{};
+double fahrenheit{};
+double kelvine{};
+double rankine{};
 
 int main(int argc, char **argv) {
 
 	welcomeBanner();
 	menuSelector();
+
 
 	int options{};
 
@@ -24,43 +42,43 @@ int main(int argc, char **argv) {
 
 		switch (options) {
 			case 1:
-				std::cout << "case1\n";
+				celciusToFahrenheit(celcius);
 				break;
 			case 2:
-				std::cout << "case2\n";
+				celciusToKelvine(celcius);
 				break;
 			case 3:
-				std::cout << "case3\n";
+				celciusToRankine(celcius);
 				break;
 			case 4:
-				std::cout << "case4\n";
+				fahrenheitToCelcius(fahrenheit);
 				break;
 			case 5:
-				std::cout << "case5\n";
+				fahrenheitToKelvine(fahrenheit);
 				break;
 			case 6:
-				std::cout << "case6\n";
+				fahrenheitToRankine(fahrenheit);
 				break;
 			case 7:
-				std::cout << "case7\n";
+				kelvineToCelcius(kelvine);
 				break;
 			case 8:
-				std::cout << "case8\n";
+				kelvineToFahrenheit(kelvine);
 				break;
 			case 9:
-				std::cout << "case9\n";
+				kelvineToRankine(kelvine);
 				break;
 			case 10:
-				std::cout << "case10\n";
+				rankineToCelcius(rankine);
 				break;
 			case 11:
-				std::cout << "case11\n";
+				rankineToFahrenheit(rankine);
 				break;
 			case 12:
-				std::cout << "case12\n";
+				rankineToKelvine(rankine);
 				break;
 			case 13:
-				std::cout << "case13\n";
+				std::cout << "Quitting" << std::endl;
 				break;
 			default:
 				std::cout << "Please choose from the menu provided" << std::endl;
@@ -98,3 +116,143 @@ void menuSelector(){
 	std::cout << "\t[13] - Quit\n\n";
 	std::cout << "=========================================================" << std::endl;
 }
+
+void celciusToFahrenheit(double celcius){
+	std::cout << "\n============ Celcius to Fahrenheit ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> celcius;
+	fahrenheit = (celcius * 9/5) + 32;
+	std::cout << std::endl;
+	std::cout << celcius << "˚C is equivalent to " << fahrenheit << "˚F\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void celciusToKelvine(double celcius){
+	std::cout << "\n============ Celcius to Kelvine ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> celcius;
+	kelvine = celcius + 273.15;
+	std::cout << std::endl;
+	std::cout << celcius << "˚C is equivalent to " << kelvine << "˚K\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void celciusToRankine(double celcius){
+	std::cout << "\n============ Celcius to Rankine ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> celcius;
+	rankine = (celcius + 273.15) * 9/5;
+	std::cout << std::endl;
+	std::cout << celcius << "˚C is equivalent to " << rankine << "˚R\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void fahrenheitToCelcius(double fahrenheit){
+	std::cout << "\n============ Fahrenheit to Celcius ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> fahrenheit;
+	celcius = (fahrenheit - 32) * 5/9;
+	std::cout << std::endl;
+	std::cout << fahrenheit << "˚F is equivalent to " << celcius << "˚C\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void fahrenheitToKelvine(double fahrenheit){
+	std::cout << "\n============ Fahrenheit to Kelvine ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> fahrenheit;
+	kelvine = (fahrenheit + 459.67) * 5/9;
+	std::cout << std::endl;
+	std::cout << fahrenheit << "˚F is equivalent to " << kelvine << "˚K\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void fahrenheitToRankine(double fahrenheit){
+	std::cout << "\n============ Fahrenheit to Rankin ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> fahrenheit;
+	rankine = fahrenheit + 459.67;
+	std::cout << std::endl;
+	std::cout << fahrenheit << "˚F is equivalent to " << rankine << "˚R\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void kelvineToCelcius(double kelvine){
+	std::cout << "\n============ Kelvine to Celcius ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> kelvine;
+	celcius = kelvine - 273.15;
+	std::cout << std::endl;
+	std::cout << kelvine << "˚K is equivalent to " << celcius << "˚C\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void kelvineToFahrenheit(double kelvine){
+	std::cout << "\n============ Kelvine to Fahrenheit ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> kelvine;
+	fahrenheit = (kelvine * 9/5) -459.67;
+	std::cout << std::endl;
+	std::cout << kelvine << "˚K is equivalent to " << fahrenheit << "˚F\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void kelvineToRankine(double kelvin){
+	std::cout << "\n============ Kelvine to Rankine ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> kelvine;
+	rankine = (kelvine * 9/5);
+	std::cout << std::endl;
+	std::cout << kelvine << "˚K is equivalent to " << rankine << "˚R\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void rankineToCelcius(double rankine){
+	std::cout << "\n============ Rankine to Celcius ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> rankine;
+	celcius = (rankine - 491.67) * 5/9;
+	std::cout << std::endl;
+	std::cout << rankine << "˚R is equivalent to " << celcius << "˚C\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void rankineToFahrenheit(double rankine){
+	std::cout << "\n============ Rankine to Fahrenheit ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> rankine;
+	fahrenheit = rankine - 459.67;
+	std::cout << std::endl;
+	std::cout << rankine << "˚R is equivalent to " << fahrenheit << "˚F\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+void rankineToKelvine(double rankine){
+	std::cout << "\n============ Rankine to Kelvine ============\n";
+	std::cout << "===============================================\n";
+	std::cout << "\nPlease enter a number: ";
+	std::cin >> rankine;
+	kelvine = rankine * 5/9;
+	std::cout << std::endl;
+	std::cout << rankine << "˚R is equivalent to " << kelvine << "˚K\n" << std::endl;
+	std::cout << "===============================================\n";
+}
+
+
+
+
+
+
+
+
