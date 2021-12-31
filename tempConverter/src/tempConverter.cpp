@@ -6,6 +6,10 @@
  */
 
 
+// TODO: Place functions in other files
+// Work out how to do this.
+
+
 #include <iostream>
 
 void welcomeBanner();
